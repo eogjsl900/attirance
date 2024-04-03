@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- mapper화일 sql 문장 작성 -->
+
+<mapper namespace="review.model.Review">
+	<!-- 리절트리턴은 필수지만 파라미터리턴은 굳이..안 써도됨 -->
+	<select id="GetTotalCount" resultType="int" parameterType="hashMap">
+		select count(*) from review where pnum=#{pnum}
+	</select>
+							<!-- 하나일수도 있고 여러개일수도 있고..타입은 이런거다..  -->
+	<select id="GetReviewList" resultType="MyReview" parameterType="hashMap">
+		select * from review where pnum=#{pnum} order by reg_date desc
+	</select>
+							<!-- insert, up,del 은 리턴타입 인트니까 쓰지 말자!   #{rating}    -->
+	<insert id="InsertReview" parameterType="MyReview">
+		insert into review
+		values (review_seq.nextval,#{pnum},#{mid},review_seq.currval,#{content},#{star},sysdate)
+	</insert> 
+	
+<!-- 	
+	<select id="GetProduct" resultType="MyProduct">
+		select * from product where num=#{num}
+	</select>
+	
+	<update id="UpdateProduct">
+		update product set name=#{name}, company=#{company}, image=#{image}, stock=#{stock},
+		 price=#{price}, contents=#{contents}, point=#{point} where num=#{num}
+	</update> 
+	
+	<delete id="DeleteProduct">
+		delete from product where num=#{num}
+	</delete> 
+	
+	<update id="UpdateStock">
+		update product set stock = stock - #{stock } where num=#{num }
+	</update>
+-->
+	
+	
+</mapper>

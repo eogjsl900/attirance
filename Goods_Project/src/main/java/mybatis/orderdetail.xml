@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- mapper화일 sql 문장 작성 -->
+
+<mapper namespace="orderdetail.model.OrderDetail">
+	
+	<insert id="InsertData">
+		insert into ordersdetail values(orddetail_seq.nextval,#{onum},#{pnum},#{qty})
+	</insert>
+	
+	<select id="GetData" resultType="MyOrderDetail">
+		select * from ordersdetail where onum=#{maxonum}
+	</select>
+	
+</mapper>

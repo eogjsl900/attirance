@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+
+	textarea#privacy_agreement {
+    width: 560px;
+    height: 140px;
+    margin: 0 0 10px;
+	}

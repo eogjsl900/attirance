@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- (id, password, name, zipcode, addr1, addr2 , tel1, tel2, tel3 , phone1, phone2,
+		                   phone3, email1, email2 , mpoint ,reg_date , favorite  ) -->
+<mapper namespace="member.model.Member">
+	
+	<insert id="InsertData" parameterType="MyMember">
+		insert into member
+		values( #{id}, #{password},#{name}, #{zipcode} , #{addr1}, #{addr2} , #{tel1}, #{tel2}, #{tel3},
+		        #{phone1}, #{phone2}, #{phone3},#{email1}, #{email2} , #{mpoint} , sysdate, #{favorite}  )
+	</insert>
+	
+	<select id="GetDataList" resultType="MyMember" parameterType="hashmap">
+		select * from member		
+		<if test="whatColumn == 'name'">
+			where name like #{keyword}
+		</if>		
+		<if test="whatColumn == 'favorite'">
+			where favorite like #{keyword}
+		</if>	
+		order by id desc
+	</select>
+
+	<select id="GetTotalCount" resultType="int">
+		select count(*) from member
+		<if test="whatColumn == 'name'">
+			where name like #{keyword}
+		</if>		
+		<if test="whatColumn == 'favorite'">
+			where favorite like #{keyword}
+		</if>	
+	</select>
+	
+	<select id="GetData" resultType="MyMember">
+		select * from member 
+		where id = #{id} 
+	</select>
+	
+	<update id="updatePoint">
+		update member set
+		mpoint=mpoint + #{mpoint} where id=#{id}
+	</update>
+</mapper>
+
+
+
+
+
+
+

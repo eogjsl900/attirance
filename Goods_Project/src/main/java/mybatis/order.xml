@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- mapper화일 sql 문장 작성 -->
+
+<mapper namespace="order.model.Order">
+	
+	<insert id="InsertData" parameterType="MyOrder">
+		insert into orders
+		values (order_seq.nextval,#{mid},sysdate,#{name},#{zipcode},#{addr1},#{addr2},#{phone1},
+		#{phone2},#{phone3},#{email1},#{email2},#{message},#{totalprice},#{point},#{payment})
+	</insert>
+	
+	<!-- [onum=0, mid=nmh1212, orderdate=null, name=노민형, zipcode=06779, addr1=서울특별시 서초구 강남대로12길 6, addr2=양대동, phone1=010, phone2=123, phone3=0000, 
+	email1=abc, email2=abcd.com, message=1231231244, totalprice=45000, point=450, payment=inicis] -->
+	
+	<select id="GetMaxOrderNum" resultType="int">
+		select max(onum) from orders 
+	</select>
+	
+	<select id="GetData" resultType="MyOrder">
+		select * from orders where onum=#{maxonum}
+	</select>
+	
+	<select id="OrderResult" resultType="MyOrder">
+		select * from orders where onum=#{maxonum} 
+	</select> 
+	
+	<select id="OrderMall" resultType="MyOrder">
+		select * from orders where mid=#{mid} 
+	</select>
+	
+</mapper>

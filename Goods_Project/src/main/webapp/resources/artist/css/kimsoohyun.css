@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* 김수현 */
+.home-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    background-image: url('../img/soohyunkim/kim_main.jpg');
+    background-size: cover;
+}

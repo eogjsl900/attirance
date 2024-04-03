@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qnA.QnA">
+	<select id="GetTotalCount"  resultType="int"  parameterType="hashmap">
+		select count(*) from qna 
+		<if test="whatColumn=='all'">
+			where subject like #{keyword} or writer like #{keyword}
+		</if>
+		<if test="whatColumn=='subject'">
+			where subject like #{keyword}
+		</if>
+		<if test="whatColumn=='writer'">
+			where writer like #{keyword}
+		</if>
+		
+	</select>
+
+	<select id="GetQnAList" resultType="MyQnA"> <!-- parameterType은 생략가능 -->
+		<!-- MyAlbum은 album.model.AlbumBean의 별칭 -->
+		select * from qna
+		<if test="whatColumn=='all'">
+			where subject like #{keyword} or writer like #{keyword}
+		</if>
+		 
+		<if test="whatColumn=='subject'">
+			where subject like #{keyword}
+		</if>
+		<if test="whatColumn=='writer'">
+			where writer like #{keyword}
+		</if>
+		order by ref desc,num asc
+	</select>
+	
+	<insert id="InsertQnA"> 
+		insert into qna(num,writer,subject,passwd,ref,content,secret,image1,image2,image3) 
+		values(qna_seq.nextval,#{writer},#{subject},#{passwd},qna_seq.currval,#{content},#{secret},#{image1},#{image2},#{image3})
+	</insert>  
+	
+	<update id="UpdateCount">
+		update qna set readcount = readcount+1 where num=#{num}
+	</update>
+	 
+	<select id="getQnA" resultType="MyQnA">
+		select * from qna where num=#{num}
+	</select>
+	
+	
+	<select id="chkPw" resultType="String">
+		select passwd from qna where num=#{num}
+	</select>
+	<update id="updateQnA">
+		update qna set writer=#{writer},subject=#{subject},email=#{email},content=#{content} 
+		where num=#{num}
+	</update>
+	
+
+	<delete id="deleteQnA">
+		delete from qna where num=#{num}
+	</delete>
+	
+	
+	<select id="ArticleCount">
+		select count(*) as cnt from qna
+	</select>
+	
+	<update id="UpdateArticle">
+		update qna set re_step = re_step +1 
+		where ref=#{ref} and re_step > #{restep}
+	</update>
+	
+	
+	<insert id="replyArticle">
+		insert into qna(num,writer,subject,passwd,reg_date,ref,content,secret,image1,image2,image3) 
+		values(qna_seq.nextval,#{writer},#{subject},#{passwd},
+		#{regdate},#{num},#{content},#{secret},#{image1},#{image2},#{image3})
+	</insert>
+</mapper>
+
+
+
+
+
+
+

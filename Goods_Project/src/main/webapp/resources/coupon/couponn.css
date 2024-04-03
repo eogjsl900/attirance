@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url(../font/notokr-thin.eot),
+    url(../font/notokr-thin.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-thin.woff) format('woff'),
+    url(../font/notokr-thin.ttf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Noto Sans Regular'), local('NotoSans-regular'),
+    url(../font/notokr-regular.eot),
+    url(../font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-regular.woff) format('woff'),
+    url(../font/notokr-regular.ttf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: /*local('Noto Sans Bold'), local('NotoSans-Bold'),*/ 
+    url(../font/notokr-bold.eot),
+    url(../font/notokr-bold.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-bold.woff) format('woff'),
+    url(../font/notokr-bold.ttf) format('opentype');
+}
+
+/* 怨듯넻 */
+
+.coupon-contents {margin: 0; padding:0; font-family:'Noto Sans KR'!important; color:#666; font-size: 16px; font-weight: 200; word-break: keep-all;}
+
+
+
+/* 硫ㅽ뵆�ъ뒪 �꾩껜 �곸뿭 */
+#memplus_wrap a{text-decoration:none}
+#memplus_wrap a:hover,a:active,a:focus{text-decoration:none;}
+#memplus_wrap {width:100%; position:relative; margin:0 auto; }
+
+/* 媛쒖씤�뺣낫 �곸뿭 */
+.info_wrap{width:980px; margin:0 auto; margin-top:8px; display:inline-block; clear:both; }
+.info_wrap p img{width:980px; margin-bottom:8px;}
+.info_user {width:980px;}
+.info_user_left {float:left;}
+.info_user_right {float:right;}
+.info_user img {width:482px!important;}
+
+/*footer*/
+.sp_footer {display:block;  padding:0px 0 10px 0;}
+
+
+
+
+
+
+/*紐⑤컮�� 媛쒖씤�뺣낫*/
+.info_wrap_new {width:100%; background-color: #f2f2f2; padding-top:10px;}
+.info_wrap_new p {width:96%; margin:0 auto; padding-bottom:6px;}
+
+/*荑좏룿利앹젙 �덈궡 踰꾪듉 18-06-04*/
+.top_coupon_link{ float:left; display:inline-block;cursor:pointer; background-color:#767676; padding:5px 8px; border-radius: 3px;  margin:10px 0 6px 6px; }
+.top_coupon_link p {color:#fff; font-size: 13px; font-weight: 300;}
+
+/*紐⑤컮�� 媛쒖씤�뺣낫泥섎━諛⑹묠 踰꾪듉 �대�吏�留�*/
+.imagemap {position: relative; width:device-width;}
+.imagemap img {display: block;}
+.link1 {position: absolute; top:11%; left:73%; width: 25%; height: 8%;} 
+
+
+/*紐⑤컮�� footer*/
+.footer_img {width:100%;}
+
+/*紐⑤컮�� �몄쬆 mark*/
+.footer_mark {width:100%;margin:0; background-color: #000}
+.footer_mark .mark_l {width:50%; float:left;}
+.footer_mark .mark_r {width:50%; float:left;}
+.footer_mark img {width:100%;}
+
+/* 
+2018-04-10 �낅뜲�댄듃 
+荑좏룿 �덈궡 �앹뾽�� ���� �ㅽ���
+*/
+
+#mask { position:absolute; z-index:9000; background-color:#000; display:none; left:0; top:0;} 
+.popup_input{display: none; position:fixed; left:50%; top:20%; margin-left:-300px; width:600px; overflow: hidden; background-color:#FFF; z-index:10000; border:2px solid #333333; }
+.popup_close a:hover{text-decoration:none; color:#fff;}
+.popup_top {width:600px; height:60px; background:#0085ec; text-align:left; font-family:'Noto Sans KR';}
+.popup_title {float:left; height:20px; padding:15px 0 0px 20px; color:#ffffff; font-size:20px; font-weight:300;}
+.popup_close {height:20px; padding:15px 20px 0px 20px; float: right;}
+.popup_close a {color:#fff!important; font-size:20px; font-weight:bold; text-decoration:none; }
+
+/* �앹뾽 �뚯씠釉� */
+table.style1 {border-collapse:collapse; display:inline-block; float:left; width:100%; margin:20px;}
+table.style1 td {vertical-align: top; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:14px; font-weight:200; color:#555555; letter-spacing:-0.8px; text-align:left; padding:8px 12px;}
+table.style1 th {vertical-align: middle; text-align:center; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:14px; font-weight:300; color:#555555; letter-spacing:-0.5px; background-color:#f7f7f7; padding:8px;}
+
+
+/* 紐⑤컮�� �앹뾽 �ъ씠利� 諛� �꾩튂 */
+
+@media screen and (max-width:800px) {	
+
+.popup_input{display: none; position:absolute; left:52%; top:5%; margin-left:-50%; width:95%; overflow: hidden; background-color:#FFF; z-index:10000; border:2px solid #333333; }
+.popup_close a:hover{text-decoration:none; color:#fff;}
+.popup_top {width:100%; height:60px; background:#0085ec; text-align:left; font-family:'Noto Sans KR';}
+.popup_title {float:left; height:20px; padding:15px 0 0px 20px; color:#ffffff; font-size:20px; font-weight:300;}
+.popup_close {height:20px; padding:15px 20px 0px 20px; float: right;}
+.popup_close a {color:#fff!important; font-size:20px; font-weight:bold; text-decoration:none;}
+
+table.style1 {border-collapse:collapse; display:inline-block; float:left; width:96%; margin:2%;}
+table.style1 td {vertical-align: top; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:14px; font-weight:200; color:#555555; letter-spacing:-0.8px; text-align:left; padding:8px 12px;}
+table.style1 th {vertical-align: middle; text-align:center; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:14px; font-weight:300; color:#555555; letter-spacing:-0.5px; background-color:#f7f7f7; padding:8px;}
+
+ }
+
+/* 紐⑤컮�� �몄쬆留덊겕 �앹뾽 */
+
+.framepopup {
+position: fixed;top: 0;left: 0;overflow: hidden;
+width: 100%; height: 100%; 
+background: url("http://memplus.interpark.com/jsps_life/policy/mobile/images/bg_dim.png") repeat 0 0;z-index: 9999999;
+}
+.framepopup .pop {
+position: absolute; top: 2px; left: 0.5%; overflow: hidden;
+padding: 5px; border-radius: 5px; width: 96%; height: 99%;
+background: #fff;
+text-align: left;
+-webkit-overflow-scrolling:touch;
+overflow-x: scroll;
+overflow-y: scroll;
+}
+.framepopup img {width: 100%;}
+
+
+/* 李몄뿬 �꾨즺 �앹뾽  */
+.black_overlay{ display: none; position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.8;  opacity:.50;  filter: alpha(opacity=50); }
+.pc_popup_new{ display: none; position:fixed; top: 50%; left: 50%; margin-top: -187px; margin-left:-311px; z-index: 1002; }
+.end_pop_bg {width:622px; height: 374px; background: url('http://test.memplus.co.kr/jsps_life/common/images/end/pop_sp_bg.png') no-repeat; }
+.end_pop_txt {line-height: 28px; font-size: 21px; color:#000; text-align: left; padding-left:40px;  padding-top:44px; font-weight: 300; letter-spacing: -1.0px; }
+.end_pop_txt span {font-size: 21px; color:#2796e4; font-weight: 300; letter-spacing: -1.0px; }
+
+
+
+/* 紐⑤컮�� 李몄뿬 �꾨즺 �앹뾽 */
+.pop_clear {width:90%; z-index: 10; background:#fff; text-align:center; padding:5% 5%;}
+.pop_clear img{ width: 100%; }
+.pop_btns_wrap{ width:86%; margin: 0 7%; }
+.pop_btns_wrap a{display:block; text-align:center; margin-bottom: 3%; }
+

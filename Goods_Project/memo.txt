@@ -1,0 +1,621 @@
+
+drop table member cascade constraints;
+create table member(
+  id varchar2(12) primary key,
+  password varchar2(10), 
+  name varchar2(15),
+  zipcode varchar2(10), 
+  addr1 varchar2(100), 
+  addr2 varchar2(50),
+  tel1 varchar2(8),
+  tel2 varchar2(8),
+  tel3 varchar2(8),
+  phone1 varchar2(8), 
+  phone2 varchar2(8),
+  phone3 varchar2(8),
+  email1 varchar2(15),
+  email2 varchar2(15),
+  mpoint number default 0,
+  reg_date date default sysdate,
+  favorite varchar2(30)
+);
+
+
+
+drop sequence product_seq;
+create sequence product_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table product cascade constraints;
+create table product(
+  num number primary key,
+  name varchar2(100),
+  singer varchar2(30),
+  price number,
+  category varchar2(50),
+  stock number,
+  image varchar2(100),
+  inputdate date default sysdate,
+  star number default 0,
+  point number default 0
+);
+
+insert into product(num,name,singer,price,category,stock,image,point,star) 
+values(product_seq.nextval,'트와이스 굿즈 미니 포스트 포토카드 56장 세트 전원멤버','twice',7000,'[Cd]','100','twice_01.jpg',70,5);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 LOVE YOURSELF 結 ANSWER 버전 4종 세트 합본','bts',66000,'[Cd]','500','bts_01.jpg',660);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'있지 굿즈 포카 포토카드 포토메세지카드 56장 선물 (ITZY goods photomessage card 56pcs)','itzy',9500,'[Cd]','1000','itzy_01.jpg',95);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'아이유 굿즈 포카 포토카드 포토메세지카드 56장 선물 (ITZY goods photomessage card 56pcs)','itzy',9500,'[Cd]','1000','itzy_01.jpg',95);
+
+
+
+---------------------------------- B T S !! ------------------------------------------
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 스페셜인형 아이돌인형(방탄인형)','bts',21890,'[Toy]인형/피규어','300','bts_doll_01.jpg',218);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 스트랩 네임택','bts',6900,'[Fashion]모자/장갑/잡화','300','bts_bracelet_01.png',69);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 휴대미니봉 아미밤','bts',17050,'[Toy]기타 토이','600','bts_lamp_01.png',170);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 맨투맨 티셔츠','bts',29400,'[Fashion]의류','500','bts_mantoman_01.png',294);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 백팩','bts',45000,'[Fashion]가방/파우치','700','bts_backpack_01.png',450);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 야구모자 볼캡','bts',16900,'[Fashion]모자/장갑/잡화','700','bts_cap_01.png',169);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 등쿠션','bts',29000,'[Living]쿠션류','700','bts_cushion_01.png',290);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  수면등LED 블루투스가능','bts',59000,'[Living]생활소품','700','bts_stand_01.jpg',590);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  머그컵','bts',10000,'[Living]컵/물병','700','bts_cup_01.jpg',100);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  정국 보조배터리 5000mah','bts',20000,'[Living]기타리빙','700','bts_batterycharger_01.jpg',200);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  집업 점퍼','bts',28900,'[Fashion]의류','700','bts_zipup_01.jpg',289);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  스마트폰 케이스','bts',14900,'[Living]기타리빙','700','bts_phonecase_01.jpg',149);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  슬리퍼','bts',23700,'[Fashion]모자/장갑/잡화','700','bts_flipflop_01.jpg',237);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  텀블러','bts',13000,'[Living]컵/물병','700','bts_tumbler_01.jpg',130);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  레이저파우치','bts',18000,'[Fashion]가방/파우치','800','bts_laserpouch_01.jpg',180);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  카펫','bts',12900,'[Living]생활소품','500','bts_carpet_01.jpg',129);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  피규어','bts',48800,'[Toy]인형/피규어','500','bts_figure_01.jpg',488);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단  이니셜 팔찌','bts',6900,'[Fashion]모자/장갑/잡화','500','bts_bracelet_02.jpg',69);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 파우치','bts',7900,'[Fashion]가방/파우치','500','bts_pouch_02.jpg',79);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 지갑','bts',22900,'[Fashion]가방/파우치','500','bts_wallet_01.jpg',229);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 포토 캔버스','bts',31900,'[Living]생활소품','500','bts_photocanvas_01.jpg',319);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 스티커','bts',2000,'[Toy]기타 토이','500','bts_sticker_01.jpg',20);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 스티커 추억','bts',12000,'[Toy]기타 토이','500','bts_sticker_02.jpg',120);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 후드티','bts',35800,'[Fashion]의류','500','bts_hoodt_01.jpg',358);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 스탠드','bts',19700,'[Living]생활소품','500','bts_stand_02.jpg',197);
+--여기부터
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 포토 텀블러','bts',16500,'[Living]컵/물병','500','bts_tumbler_02.jpg',165);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 에코백','bts',14900,'[Fashion]가방/파우치','300','bts_ecobag_01.jpg',149);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 필통','bts',14900,'[Fashion]가방/파우치','300','bts_pencilcase_01.jpg',149);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 피규어','bts',19300,'[Toy]인형/피규어','300','bts_figure_02.jpg',193);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 달력','bts',2000,'[Toy]기타 토이','300','bts_calendar_01.jpg',20);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 필통','bts',12000,'[Toy]기타 토이','300','bts_pencilcase_02.jpg',120);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 폰홀더','bts',5000,'[Toy]기타 토이','300','bts_phoneholder_01.jpg',50);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 민소매 티셔츠','bts',19000,'[Fashion]의류','300','bts_tshilrt_01.jpg',190);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 키링','bts',9000,'[Fashion]모자/장갑/잡화','300','bts_keyring_01.jpg',90);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 인형머리띠','bts',32000,'[Fashion]모자/장갑/잡화','300','bts_headband_01.jpg',320);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 퍼즐1','bts',12000,'[Toy]퍼즐','300','bts_puzzle_01.jpg',120);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 퍼즐2','bts',12000,'[Toy]퍼즐','300','bts_puzzle_02.jpg',120);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 퍼즐3','bts',12000,'[Toy]퍼즐','300','bts_puzzle_03.jpg',120);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 DIY 폰케이스','bts',22000,'[Toy]DIY','300','bts_diyphonecase_01.jpg',220);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 DIY 사진과 끈세트','bts',9000,'[Toy]DIY','300','bts_diyphotostring_01.jpg',90);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 DIY 의류패치','bts',7000,'[Toy]DIY','300','bts_diypatch_01.jpg',70);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 시계','bts',31500,'[Fashion]모자/장갑/잡화','300','bts_watch_01.jpg',315);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 캔버스','bts',66400,'[Fashion]모자/장갑/잡화','300','bts_shoe_01.jpg',664);
+
+-091019 여기부터
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 등쿠션2','bts',22900,'[Living]쿠션류','300','bts_cushion_02.jpg',229);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 등쿠션3','bts',22900,'[Living]쿠션류','300','bts_cushion_03.jpg',229);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 컴팩트','bts',42900,'[Living]기타리빙','300','bts_compact_01.jpg',429);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 컴팩트2','bts',42900,'[Living]기타리빙','300','bts_compact_02.jpg',429);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 책','bts',13900,'[Living]기타리빙','300','bts_book_01.jpg',139);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 헤드폰','bts',39900,'[Living]생활소품','300','bts_headphone_01.jpg',399);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 헤드폰2','bts',39900,'[Living]생활소품','300','bts_headphone_02.jpg',399);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 포스터','bts',39900,'[Living]생활소품','300','bts_poster_01.jpg',399);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'방탄소년단 포스터2','bts',39900,'[Living]생활소품','300','bts_poster_02.jpg',399);
+
+--------------------------아이유------------------------------------
+
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'아이유 폰케이스','iu',39900,'[Toy]기타 토이','300','iu_case_01.jpg',399);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'아이유 폰케이스2','iu',35900,'[Toy]기타 토이','300','iu_case_02.jpg',359);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'아이유 카드','iu',15900,'[Toy]기타 토이','300','iu_card_01.jpg',159);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'아이유 카드2','iu',15900,'[Toy]기타 토이','300','iu_card_02.jpg',159);
+
+
+--------------------------twice------------------------------------
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 보조배터리','twice',15000,'[Living]기타리빙','300','twice_batterycharger_01.jpg',150);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 보조배터리2','twice',15000,'[Living]기타리빙','300','twice_batterycharger_02.jpg',150);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 응원봉','twice',25900,'[Toy]기타 토이','300','twice_lamp_01.jpg',259);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 응원봉2','twice',25900,'[Toy]기타 토이','300','twice_lamp_02.jpg',259);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 인형','twice',34900,'[Toy]인형/피규어','300','twice_doll_01.jpg',349);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 인형2','twice',44900,'[Toy]인형/피규어','300','twice_doll_02.jpg',449);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'트와이스 DIY 사진과 끈세트','twice',10000,'[Toy]DIY','300','twice_photostring_01.jpg',100);
+
+---------------------red velvet---------------------
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 카드','redvelvet',15900,'[Toy]기타 토이','300','redvelvet_card_01.jpg',159);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 카드2','redvelvet',15900,'[Toy]기타 토이','300','redvelvet_card_02.jpg',159);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 폰케이스','redvelvet',25900,'[Toy]기타 토이','300','redvelvet_case_01.jpg',259);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 폰케이스2','redvelvet',25900,'[Toy]기타 토이','300','redvelvet_case_02.jpg',259);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 키링','redvelvet',9900,'[Toy]기타 토이','300','redvelvet_keyring_01.jpg',99);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 응원봉','redvelvet',25000,'[Toy]기타 토이','300','redvelvet_lamp_01.jpg',250);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'레드벨벳 폰홀더','redvelvet',25000,'[Toy]기타 토이','300','redvelvet_phoneholder_01.jpg',250);
+
+
+
+---------------------김수현---------------------
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 달력','kimsoohyun',15000,'[Toy]기타 토이','300','ksh_calendar_01.jpg',150);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 달력2','kimsoohyun',15000,'[Toy]기타 토이','300','ksh_calendar_02.jpg',150);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 폰케이스','kimsoohyun',20000,'[Toy]기타 토이','300','ksh_case_01.jpg',200);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 폰케이스2','kimsoohyun',17000,'[Toy]기타 토이','300','ksh_case_02.jpg',170);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 컵','kimsoohyun',10000,'[Living]컵/물병','300','ksh_cup_01.jpg',100);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 컵2','kimsoohyun',10000,'[Living]컵/물병','300','ksh_cup_02.jpg',100);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 포스터','kimsoohyun',20000,'[Living]생활소품','300','ksh_poster_01.jpg',200);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 포스터','kimsoohyun',20000,'[Living]생활소품','300','ksh_poster_02.jpg',200);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 텀블러','kimsoohyun',15000,'[Living]컵/물병','300','ksh_tumbler_01.jpg',150);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'김수현 텀블러2','kimsoohyun',15000,'[Living]컵/물병','300','ksh_tumbler_02.jpg',150);
+
+
+
+---------------------한혜진---------------------
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'한혜진 폰케이스','hanhyejin',20000,'[Toy]기타 토이','300','hyejin_phonecase_01.jpg',200);
+
+
+
+---------------------itzy---------------------
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'잇지 뱃지','itzy',10000,'[Toy]기타 토이','300','itzy_badge_01.jpg',100);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'잇지 카드','itzy',17000,'[Toy]기타 토이','300','itzy_card_01.jpg',170);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'잇지 앨범','itzy',34900,'[Cd]','300','itzy_cd_01.jpg',349);
+
+insert into product(num,name,singer,price,category,stock,image,point) 
+values(product_seq.nextval,'잇지 텀블러','itzy',15900,'[Living]컵/물병','300','itzy_tumbler_01.jpg',159);
+
+commit;
+
+
+
+
+
+drop sequence prodetail_seq;
+create sequence prodetail_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table productdetail cascade constraints;
+create table productdetail(
+  pdnum number primary key,
+  pnum number references product(num) on delete cascade,
+  image varchar2(30),
+  imagecount number,
+  contents varchar2(1000)
+);
+
+drop sequence review_seq;
+create sequence review_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table review cascade constraints;
+create table review(
+  num number primary key,
+  pnum number references product(num) on delete cascade,
+  mid varchar2(12) references member(id) on delete cascade,
+  ref number,
+  review varchar2(500),
+  star number
+);
+
+drop sequence notice_seq;
+create sequence notice_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table notice cascade constraints;
+create table notice(
+  num number not null primary key,
+	writer varchar2(20) not null,
+	subject varchar2(50) not null,
+	image varchar2(30),
+	reg_date date default sysdate not null,
+	readcount int default 0,
+	contents varchar2(500) not null
+);
+
+insert into notice(num,writer,subject,image,contents) 
+values(notice_seq.nextval,'관리자','2019년 추석 연휴 배송 안내','notice_012.png',
+'추석 연휴 기간 배송 일정 안내드립니다.
+9월 9일 오후 1시 이전 결제된 주문은 당일 출고됩니다.
+9월 9일 오후 1시 이후 결제된 주문은 택배사 휴무 관계로 9월 16일부터 순차적으로 출고됩니다.
+9월 16일 이후로는 정상적으로 평일 오후 1시 이전 결제된 주문은 당일 발송될 예정입니다.
+연휴 전후로 택배 수요가 늘어나 배송이 다소 지연 될 수 있으니 이점 양해 부탁드리며, 이용에 참고 부탁드립니다.
+풍성한 한가위 되세요.
+이용해 주셔서 감사합니다.');
+
+insert into notice(num,writer,subject,contents) 
+values(notice_seq.nextval,'관리자','	2019년 설 연휴 기간 배송 안내',
+'안녕하세요. ATTIRANCE 관리자 입니다.
+오는 설 연휴 기간 배송 일정 안내드립니다.
+1월 30일 오후 1시 이전 결제된 주문은 당일 출고됩니다.
+1월 30일 오후 1시 이후 결제된 주문은 택배사 휴무 관계로 2월 7일부터 순차적으로 출고됩니다.
+2월 7일 이후로는 정상적으로 평일 오후 1시 이전 결제된 주문은 당일 발송될 예정입니다.
+연휴 전후로 택배 수요가 늘어나 배송이 다소 지연 될 수 있으니 이점 양해 부탁드리며, 이용에 참고 부탁드립니다.
+새해 복 많이 받으세요.
+이용해 주셔서 감사합니다.');
+
+
+drop sequence order_seq;
+create sequence order_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table orders cascade constraints;
+create table orders(
+  onum number primary key,
+  mid varchar2(12) references member(id) on delete set null, --회원이 탈퇴하더라도 매출 데이터는 남겨 둬야 한다.
+  orderdate date default sysdate,
+  name varchar2(15),
+  zipcode varchar2(10),
+  addr1 varchar2(50),
+  addr2 varchar2(50),
+  phone1 varchar2(8), --핸드폰
+  phone2 varchar2(8),
+  phone3 varchar2(8),
+  email1 varchar2(15),
+  email2 varchar2(15),
+  message varchar2(60),
+  totalprice number,
+  mpoint number,
+  payment varchar2(30) --결제방식
+);
+
+drop sequence orddetail_seq;
+create sequence orddetail_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table ordersdetail cascade constraints;
+create table ordersdetail(
+  odnum number primary key,
+  onum number references orders(onum) on delete cascade,
+  pnum number references product(num) on delete set null,
+  qty number
+);
+
+
+
+drop sequence faq_seq;
+create sequence faq_seq
+start with 0
+minvalue 0
+increment by 1
+nocache;
+
+drop table faq cascade constraints;
+create table faq(
+  	num number not null primary key,
+  	category varchar2(20),
+	writer varchar2(20) not null,
+	subject varchar2(50) not null,
+	image varchar2(30),
+	reg_date date default sysdate not null,
+	readcount int default 0,
+	contents varchar2(1000) not null
+);
+
+insert into faq(num,category,writer,subject,image,contents) 
+values(faq_seq.nextval,'배송','대표 관리자','배송 기간 및 조회 방법','faq_01.png',
+'[배송 기간]
+ATTIRANCE 에서는 오후 1시 이전 주문 완료 건에 대하여 당일 출고를 하고 있습니다.
+공휴일을 제외하고 평균 3-7일 이내 상품 수령이 가능합니다.
+간혹 재고 부족, 배송량, 휴일, 날씨의 영향으로 배송이 지연될 수 있습니다.
+물류센터와 택배사 사정에 따라 배송 기간이 다소 늘어날 수 있는 점 양해 부탁드립니다.
+[배송 조회]
+내가 주문한 상품이 배송중 상태가 되면, 운송장 조회가 가능합니다.
+* 운송장 번호 조회는 오후 6시 이후 부터 가능하며, 대한통운 홈페이지에서 조회하시면 더 정확한 배송 추적이 가능합니다.
+');
+
+insert into faq(num,category,writer,subject,contents) 
+values(faq_seq.nextval,'주문결제','대표 관리자','결제 수단',
+'ATTIRANCE에서 아래와 같은 수단으로 결제하실 수 있습니다.
+1. 카드 결제
+2. 실시간 계좌이체
+3. 휴대폰 결제
+4. 네이버페이 결제
+5. 카카오페이 결제
+6. 가상 계좌 입금
+** 가상 계좌 입금을 선택하신 경우 주문 후 1일 내 입금해주시지 않으면 자동으로 주문이 취소됩니다.
+** 네이버페이 결제 시 무통장 입금을 이용하실 수 있습니다.');
+
+insert into faq(num,category,writer,subject,contents) 
+values(faq_seq.nextval,'교환/반품/환불','대표 관리자','부분 반품 가능한가요?',
+'ATTIRANCE의 반품 정책은 아래와 같습니다.
+* 반품이 가능한 경우
+- 포장을 개봉하거나 훼손하지 않았을 경우, 공급받으신 날로부터 7일 이내 반품이 가능합니다.
+- 공급받으신 상품 및 용역의 내용이 표기/광고 내용과 다르거나 다르게 이행된 경우에는 공급받은 날로부터 30일 이내 반품이 가능합니다.
+* 교환 및 반품이 불가능한 경우
+- 고객님의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우.
+- 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우
+  (예 : 가전제품, 의류, 문구 등)
+- 복제가 가능한 상품군(예: 도서, 음반 등)의 포장을 훼손한 경우
+※ 고객님의 단순 변심으로 인한 반품의 경우 상품 반송 비용은 고객님께서 부담하셔야 합니다.
+  (색상 교환, 사이즈 교환 등 포함)
+부분 반품의 경우 포인트/쿠폰을 사용하지 않는 주문건에 대해서만 제공하고 있습니다.
+반품을 신청하시면 반품접수 -> 반품진행 -> 반품완료 과정으로 진행 되며, 반품 완료 확인 후 결제 수단 별로 환불 처리가 됩니다.
+단, 이벤트 및 프로모션 진행 상품은 특별한 경우를 제외한 부분 반품이 불가합니다.');
+
+
+drop sequence qna_seq;
+create sequence qna_seq
+  increment by 1
+  start with 0
+  minvalue 0
+  maxvalue 10000
+  nocache;
+
+
+drop table qna;
+create table qna( 
+	num number not null primary key,
+	writer varchar2(20) not null,
+	email varchar2(20),
+	subject varchar2(50) not null,
+	passwd varchar2(50) not null,
+	reg_date date default sysdate,
+	ref number not null,
+	content varchar2(1000) not null,
+	image1 varchar2(50),
+	image2 varchar2(50),
+	image3 varchar2(50),
+	secret varchar2(20) not null
+);
+
+
+insert into qna(num,writer,subject,passwd,reg_date,ref,content,secret) 
+values(qna_seq.nextval,'홍길동','[상품 관련 문의]',1234,default,qna_seq.currval,'환불좀','비밀글');
+
+insert into qna(num,writer,subject,passwd,reg_date,ref,content,secret) 
+values(qna_seq.nextval,'나야나','[베송 관련 문의]',1234,default,qna_seq.currval,'배송좀','공개글');
+
+insert into qna(num,writer,subject,passwd,reg_date,ref,content,secret) 
+values(qna_seq.nextval,'관리자','답변 완료',1234,default,1,'처리햇습니당','비밀글');
+
+insert into qna(num,writer,subject,passwd,reg_date,ref,content,secret) 
+values(qna_seq.nextval,'관리자','답변 완료',1234,default,2,'배송햇습니다','비밀글');
+
+
+
+
+drop sequence concert_seq;
+create sequence concert_seq
+  increment by 1
+  start with 0
+  minvalue 0
+  maxvalue 10000
+  nocache;
+
+
+drop table concert;
+create table concert( 
+	num number not null primary key,
+	name varchar2(100),
+	day varchar2(50),
+	price number,
+	qty number
+);
+
+
+insert into concert values(concert_seq.nextval,'군산 콘서트 페스티벌-KPOP 콘서트','2019-09-27',0,1356);
+insert into concert values(concert_seq.nextval,'군산 콘서트 페스티벌-KPOP 콘서트','2019-09-28',0,1156);
+
+
+
+
+
+
+
+drop sequence coupon_seq;
+create sequence coupon_seq
+  increment by 1
+  start with 0
+  minvalue 0
+  maxvalue 10000
+  nocache;
+
+
+drop table coupon;
+create table coupon(
+	num number not null primary key,
+	name varchar2(100),
+	day varchar2(50),
+	price number,
+	u_id varchar2(1000),
+	use number default 1 
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit;

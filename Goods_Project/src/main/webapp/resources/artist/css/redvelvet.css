@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.home-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    background-image: url('../img/redvelvet/red_main.png');
+    background-size: cover;
+}

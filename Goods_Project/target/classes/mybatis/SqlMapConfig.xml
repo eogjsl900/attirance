@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+ <configuration>
+  
+	 <settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+ 	<typeAliases>
+ 		<typeAlias alias="MyMember" type="member.model.Member"/>
+ 		<typeAlias type="product.model.Product" alias="MyProduct"/>
+		<typeAlias type="qna.model.QnA" alias="MyQnA"/>
+		<typeAlias type="notice.model.Notice" alias="MyNotice"/>
+		<typeAlias type="faq.model.FAQ" alias="MyFAQ"/>
+		<typeAlias type="concert.model.Concert" alias="MyConcert"/>
+		<typeAlias type="coupon.model.Coupon" alias="MyCoupon"/>
+		<typeAlias type="order.model.Order" alias="MyOrder"/>
+		<typeAlias type="orderdetail.model.OrderDetail" alias="MyOrderDetail"/>
+ 	</typeAliases>
+ 
+	<mappers>
+		<mapper resource="mybatis/member.xml"/>
+		<mapper resource="mybatis/product.xml"></mapper>
+		<mapper resource="mybatis/qna.xml"></mapper>
+		<mapper resource="mybatis/notice.xml"></mapper>
+		<mapper resource="mybatis/FAQ.xml"></mapper>
+		<mapper resource="mybatis/concert.xml"></mapper>
+		<mapper resource="mybatis/coupon.xml"></mapper>
+		<mapper resource="mybatis/order.xml"/>
+		<mapper resource="mybatis/orderdetail.xml"/>
+		<mapper resource="mybatis/composite.xml"/>
+		
+	</mappers>
+	
+	
+
+</configuration>
+ 

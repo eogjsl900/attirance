@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="product.model.Product">
+	
+	<select id="GetTotalCount" resultType="int">
+		select count(*) from product
+		<if test="whatColumn == 'name'">
+			where name like #{keyword}
+		</if>		
+		<if test="whatColumn == 'singer'">
+			where singer like #{keyword}
+		</if>	
+		<if test="whatColumn == 'category'">
+			where category like #{keyword}
+		</if>	
+		<if test="whatColumn == 'best'">
+			where star >= 4 and singer like #{keyword}
+		</if>	
+	</select>
+	
+	<select id="GetDataList" resultType="MyProduct" parameterType="hashmap">
+		select * from product		
+		<if test="whatColumn == 'name'">
+			where name like #{keyword}
+		</if>		
+		<if test="whatColumn == 'singer'">
+			where singer like #{keyword}
+		</if>
+		<if test="whatColumn == 'category'">  
+			where category like #{keyword}
+		</if>
+		<if test="whatColumn == 'best'">
+			where star >= 4 and singer like #{keyword}
+		</if> 	
+		order by num desc
+	</select>
+	
+	<insert id="InsertData" parameterType="MyProduct">
+		insert into product(num, name, singer, image, stock, price, category, point)
+		values( product_seq.nextval, #{name}, #{singer}, #{image}, #{stock}, #{price},   
+		 #{category},#{point})
+	</insert>
+	
+	
+	<select id="GetData" resultType="MyProduct">
+		select * from product 
+		where num = #{num}
+	</select>
+	
+	<update id="UpdateData" parameterType="MyProduct">
+		update product set
+		name=#{name}, company=#{company}, image=#{image}, stock=#{stock}, price=#{price}, 
+		contents=#{contents}, 
+		point=#{point}
+		where num=#{num}
+	</update>
+	
+	<delete id="DeleteData" >
+		delete from product
+		where num=#{num}
+	</delete>
+	
+	<update id="UpdateStock">
+		update product set 
+		stock=stock-#{orderqty} 
+		where num=#{num}
+	</update>
+</mapper>
+
+
+
+
+
+
+

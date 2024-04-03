@@ -1,0 +1,1734 @@
+@charset "UTF-8";
+/* made 2013.11.01 */
+@import url("//fonts.googleapis.com/earlyaccess/nanumgothic.css");
+/* Reset */
+html,
+body {
+  width: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 130%;
+}
+
+img {
+  font-size: 0;
+  line-height: 0;
+  border: 0 none;
+}
+
+fieldset {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+li,
+ol,
+th,
+td,
+p,
+blockquote,
+form,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  font-size: 12px;
+  font-family: "dotum", "sans-serif";
+  vertical-align: middle;
+}
+
+body,
+table,
+textarea {
+  font-size: 12px;
+  font-family: "dotum", "sans-serif";
+  color: #666;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.blind,
+legend {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: -1000em;
+  left: 0;
+}
+
+.cp_blind {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.dt_blind {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* common */
+.f11 {
+  font-size: 11px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f666 {
+  color: #666;
+}
+
+.bol {
+  font-weight: bold;
+}
+
+.fda6464 {
+  color: #da6464;
+}
+
+/*Red*/
+.f619fd8 {
+  color: #619fd8;
+}
+
+/*Blue*/
+.f585858 {
+  color: #585858;
+}
+
+/*Gray1*/
+.f575757 {
+  color: #575757;
+}
+
+/* common tag */
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.vat {
+  vertical-align: top;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.vab {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cb {
+  clear: both;
+}
+
+.inline {
+  display: inline;
+}
+
+.mt_1 {
+  margin-top: -1px;
+}
+
+.mt_5 {
+  margin-top: -5px;
+}
+
+.mt_10 {
+  margin-top: -10px;
+}
+
+.mt_20 {
+  margin-top: -20px;
+}
+
+.mt_30 {
+  margin-top: -30px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.mb_5 {
+  margin-bottom: -5px;
+}
+
+.mb_10 {
+  margin-bottom: -10px;
+}
+
+.mb_20 {
+  margin-bottom: -20px;
+}
+
+.mb_30 {
+  margin-bottom: -30px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.ml30 {
+  margin-left: 30px;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pt15 {
+  padding-top: 15px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pt30 {
+  padding-top: 30px;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pr30 {
+  padding-right: 20px;
+}
+
+.pb5 {
+  padding-bottom: 5px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+/* All LayOut */
+#bookParkMain {
+  position: relative;
+  width: 100%;
+  min-width: 980px;
+  overflow-x: none;
+}
+
+#bookPark {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+}
+
+.hide {
+  display: none;
+}
+
+#header {
+  z-index: 100;
+  position: relative;
+  width: 100%;
+}
+
+#header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+#container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#container.mainBg {
+  background-color: #f4f4f4;
+  font-family: "Malgun Gothic", "맑은 고딕", "Nanum Gothic", "Dotum", sans-serif;
+}
+
+#content {
+  z-index: 1;
+  position: relative;
+  width: 960px;
+  margin: 15px auto 0 auto;
+}
+
+#content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#eventDesign {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+#eventDesign:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.evDesignWrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.evDesignNewWrap {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.evDesignNewWrapCenter {
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#quickWrap {
+  width: 960px;
+  height: 90%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 100;
+}
+
+#quickWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#subQuickWrap {
+  width: 960px;
+  height: 90%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 50;
+}
+
+#subQuickWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.font_malgun {
+  font-family: "Malgun Gothic", "맑은 고딕", "Nanum Gothic", "Dotum", sans-serif;
+}
+
+/* icon 사용 */
+button {
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+}
+
+.button button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-indent: -9999px;
+}
+
+.button button.disabled {
+  background-color: #fff;
+  opacity: .5;
+  cursor: default;
+}
+
+.button .btLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-indent: -9999px;
+}
+
+.button .btLink.disabled {
+  background-color: #fff;
+  opacity: .5;
+  cursor: default;
+}
+
+.pnTxt {
+  float: left;
+  margin-right: 5px;
+}
+
+.bt_numTxt {
+  font-size: 11px;
+  font-weight: normal;
+  color: #a2a3a3;
+}
+
+.bt_boxPN_ctrl {
+  display: inline-block;
+  text-indent: -9999px;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/common/bt_boxPaging.gif") no-repeat left top;
+}
+
+.bt_sPre {
+  width: 13px;
+  height: 13px;
+  background-position: 0 0;
+}
+
+.bt_sNext {
+  width: 12px;
+  height: 13px;
+  background-position: -13px 0;
+}
+
+/* 공통 사용 */
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.naviSelect {
+  border-bottom: 1px solid #e4e4e4;
+  text-align: left;
+  clear: both;
+  height: 26px;
+  margin: 3px auto 10px auto;
+}
+
+#pageSorting {
+  text-align: left;
+  clear: both;
+  height: 26px;
+  margin: 10px auto;
+}
+
+#pageSorting .naviWrap {
+  clear: both;
+  line-height: 14px;
+  position: absolute;
+  z-index: 101;
+  padding-left: 9px;
+  background: url("http://bimage.interpark.com/renewPark/last_inc1007/dotted_navi.gif") no-repeat left 9px;
+  font-size: 11px;
+  z-index: 10;
+}
+
+#pageSorting .home_navi {
+  float: left;
+  padding: 3px 1px 0 0;
+}
+
+#pageSorting .selectWrap {
+  float: left;
+  padding: 0 0 0 14px;
+  white-space: nowrap;
+  background: url("http://bimage.interpark.com/renewPark/last_inc1007/arrow_navi.gif") no-repeat 5px 7px;
+}
+
+#pageSorting .tit {
+  border: 1px solid #ccc;
+  padding: 3px 7px 1px 8px;
+}
+
+#pageSorting .tit span {
+  padding-right: 16px;
+}
+
+#pageSorting .selectOn,
+#pageSorting .selectOff {
+  cursor: pointer;
+  color: #7f7f7f;
+  white-space: nowrap;
+  background: url("http://bimage.interpark.com/renewPark/last_inc1007/btn_select_layer.gif") no-repeat right 3px #fff;
+}
+
+#pageSorting .selectOff ul {
+  display: none;
+}
+
+#pageSorting .selectOn ul {
+  display: block;
+  padding: 8px 19px 4px 8px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+#pageSorting .selectOn ul li {
+  padding-bottom: 4px;
+  line-height: 12px;
+}
+
+#pageSorting .selectOn ul li.line {
+  font-size: 0;
+  line-height: 0;
+  padding: 0 0 6px 0;
+  background: url("http://bimage.interpark.com/renewPark/common/dot_line.gif") repeat-x left top;
+}
+
+#pageSorting .selectOff .boxWrap {
+  display: none;
+}
+
+#pageSorting .boxWrap {
+  display: block;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-top: 0;
+  float: left;
+  overflow: hidden;
+  clear: both;
+}
+
+#pageSorting .boxWrap ul {
+  float: left;
+  border: 0;
+}
+
+#pageSorting .boxWrap ul b {
+  text-decoration: underline;
+}
+
+#pageSorting .boxWrap a:hover ul li {
+  background: #ccc;
+}
+
+#pageSorting .selectWrap .select {
+  padding-top: 4px;
+}
+
+/* Paging */
+#pageNaviType {
+  clear: both;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  cursor: default;
+  line-height: 1.6;
+}
+
+#pageNaviType ul {
+  display: inline;
+  padding: 0 5px;
+}
+
+#pageNaviType li {
+  display: inline;
+}
+
+#pageNaviType li a {
+  display: inline-block;
+  padding: 3px 7px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+#pageNaviType li a:hover {
+  border-color: #ddd;
+  background-color: #f8f8f8;
+}
+
+#pageNaviType li strong {
+  color: #000;
+}
+
+#pageNaviType li.selected a {
+  color: #000;
+  display: inline-block;
+  padding: 3px 7px;
+  height: 19px;
+  border: 1px solid #000;
+}
+
+#pageNaviType .lnk_prev {
+  padding-left: 5px;
+}
+
+#pageNaviType .lnk_next {
+  padding-right: 5px;
+}
+
+.pageNaviType {
+  clear: both;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  cursor: default;
+  line-height: 1.6;
+}
+
+.pageNaviType ul {
+  display: inline;
+  padding: 0 5px;
+}
+
+.pageNaviType li {
+  display: inline;
+}
+
+.pageNaviType li a {
+  display: inline-block;
+  padding: 3px 7px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.pageNaviType li a:hover {
+  border-color: #ddd;
+  background-color: #f8f8f8;
+}
+
+.pageNaviType li strong {
+  color: #000;
+}
+
+.pageNaviType li.selected a {
+  color: #000;
+  display: inline-block;
+  padding: 3px 7px;
+  height: 19px;
+  border: 1px solid #000;
+}
+
+.pageNaviType .lnk_prev {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+.pageNaviType .lnk_next {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.pageNaviType .lnk_prev2 {
+  vertical-align: middle;
+}
+
+.pageNaviType .lnk_next2 {
+  vertical-align: middle;
+}
+
+.pageNaviType01 {
+  clear: both;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.pageNaviType01 a:link,
+.pageNaviType01 a:visited,
+.pageNaviType01 a:active {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.pageNaviType01 a:hover {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.pageNaviType01 span.arrow01 {
+  padding: 0 3px;
+}
+
+.pageNaviType01 span.arrow02 {
+  padding: 0 3px;
+}
+
+.pageNaviType01 span.arrow {
+  padding: 0 3px;
+}
+
+.pageNaviType01 span.txt {
+  padding-bottom: 3px;
+}
+
+.pageNaviType01 span.naviNum {
+  padding-left: 5px;
+}
+
+.pageNaviType01 span.naviNum a {
+  padding: 3px 8px 1px 6px;
+  height: 18px;
+  font-weight: bold;
+}
+
+:root .pageNaviType01 span.naviNum a {
+  line-height: 18px;
+}
+
+.pageNaviType01 span.naviNum a:link,
+.pageNaviType01 span.naviNum a:visited,
+.pageNaviType01 span.naviNum a:active {
+  border: 1px solid #fff;
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.pageNaviType01 span.naviNum a:hover {
+  border: 1px solid #ebebeb;
+  color: #3a3a3a;
+  text-decoration: none !important;
+}
+
+.pageNaviType01 span.naviNum a.on:link,
+.pageNaviType01 span.naviNum a.on:visited,
+.pageNaviType01 span.naviNum a.on:active {
+  border: 1px solid #cc90a1;
+  color: #9a2143;
+  text-decoration: none;
+}
+
+.pageNaviType01 span.naviNum a.on:hover {
+  border: 1px solid #cc90a1;
+  color: #9a2143;
+  text-decoration: none !important;
+}
+
+.pageNaviType01 span.totalTxt01 {
+  padding: 0 12px;
+  vertical-align: 2px;
+  font-size: 11px;
+  color: #777;
+}
+
+/* ----------- 띠배너 ------------*/
+#gnbBanner_100per {
+  width: 100%;
+  height: 70px;
+  min-width: 960px;
+  font-size: 0;
+  line-height: 0;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/topBanner/ban_20150407/leftBg.jpg") repeat-x 0 0;
+  position: relative;
+}
+
+.wrap_gnbBanner100 {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  z-index: 7;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/topBanner/ban_20150407/bg_center.jpg") no-repeat center top;
+}
+
+.wrap_gnbBanner100 .gnbBan_960Center {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.wrap_gnbBanner100 .gnbBan_960Center .ttiBan_imgBox {
+  float: left;
+  width: 480px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.wrap_gnbBanner100 .gnbBan_960Center .ttiBan_imgBox1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 480px;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.wrap_gnbBanner100 .gnbBan_960Center .ttiBan_imgBox2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 480px;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.wrap_gnbBanner100 .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/topBanner/common/closeBtn.png") no-repeat left center;
+  z-index: 100;
+}
+
+.wrap_patten100per {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90px;
+  width: 50%;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/topBanner/ban_20150407/rightBg.jpg") repeat-x 0 0;
+  z-index: 1;
+}
+
+/* ----------- 띠배너 Admin ------------*/
+#upper_banner100per {
+  width: 100%;
+  height: 70px;
+  min-width: 960px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.upper_100Wrap {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  z-index: 7;
+}
+
+.upper_100Wrap .upperBan_960Center {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.upper_100Wrap .upperBan_960Center .ttiBan_imgBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 960px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.upper_100Wrap .upperBan_960Center .ttiBan_imgBox1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 480px;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.upper_100Wrap .upperBan_960Center .ttiBan_imgBox2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 480px;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.upper_100Wrap .upperBan_960Center .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/topBanner/common/closeBtn.png") no-repeat left center;
+  z-index: 100;
+}
+
+.upper_patten100per {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 50%;
+  z-index: 1;
+}
+
+/* 1차 카테고리 */
+#CNB_1st {
+  width: 187px;
+  text-align: left;
+  border: 1px solid #999;
+  border-top: 0;
+  font-size: 11px;
+  background: #fff;
+}
+
+#CNB_1st #cnb_bar_1 {
+  border-top: 1px solid #999;
+}
+
+#CNB_1st .cnb_bar_on {
+  width: 187px;
+  border-top: 1px solid #e0e0e0;
+  height: 27px;
+  cursor: pointer;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/cnb/arrow_cnb_on.gif") no-repeat left top;
+}
+
+#CNB_1st .cnb_bar_off {
+  width: 187px;
+  border-top: 1px solid #e0e0e0;
+  height: 27px;
+  cursor: pointer;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/cnb/arrow_cnb_off.gif") no-repeat left top;
+}
+
+#CNB_1st .cnb_con {
+  padding: 4px 0 0 0;
+  border-top: 1px solid #e0e0e0;
+  height: 328px;
+  text-align: center;
+  position: relative;
+  z-index: 600;
+}
+
+#CNB_1st .cnb_con .bannerWrap {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  left: 19px;
+  font-size: 0;
+  line-height: 0;
+}
+
+#CNB_1st .cnb_con .bannerWrap .banner {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#CNB_1st .cnb_con .bannerWrap .banner1 {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+#CNB_1st .cnb_con .bannerWrap .banner2 {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+#CNB_1st .cnb_con .bannerWrap .banner3 {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+#CNB_1st .cnb_con .bannerWrap .banner4 {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+#CNB_1st .menuT {
+  font-size: 11px;
+  white-space: nowrap;
+  letter-spacing: -1px;
+  width: 157px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#CNB_1st .menuT td {
+  padding: 2px 0 0 0;
+  white-space: nowrap;
+  line-height: 120%;
+}
+
+#CNB_1st .menuT td a:link,
+#CNB_1st .menuT td a:visited,
+#CNB_1st .menuT td a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+#CNB_1st .menuT td a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+#CNB_1st .menuT td .icNew {
+  vertical-align: -1px;
+}
+
+#CNB_1st .menuT td span.over div.ly {
+  display: block;
+  z-index: 600;
+}
+
+#CNB_1st .menuT td span.out div.ly {
+  display: none;
+}
+
+#CNB_1st .menuT td span {
+  white-space: nowrap;
+  padding-right: 1px;
+}
+
+#CNB_1st .menuT td span div.ly {
+  position: absolute;
+  padding: 10px;
+  margin: 0 0 0 -5px;
+  overflow: hidden;
+  z-index: 600;
+  background: #fff;
+  border: 1px solid #111;
+}
+
+/* 2012-10-05 CD/DVD CNB Layer Z-index */
+#CNB_1st .menuT td span div.ly ul li {
+  white-space: nowrap;
+  padding: 2px 0 1px 4px;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/cnb/cnb_dotLine.gif") no-repeat left 5px;
+}
+
+#CNB_1st .menuT td.line {
+  padding: 2px 0;
+  height: 3px;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/cnb/cnb_tdLine.gif") repeat-x left center;
+}
+
+#CNB_1st .cnb_bar_on p {
+  padding: 8px 0 0 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#CNB_1st .cnb_bar_off p {
+  padding: 8px 0 0 16px;
+  color: #555;
+  font-weight: bold;
+}
+
+#CNB_1st .cnb_bar_over {
+  width: 187px;
+  border-top: 1px solid #e0e0e0;
+  height: 28px;
+  cursor: pointer;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/cnb/arrow_cnb_over.gif") no-repeat left top;
+}
+
+#CNB_1st .cnb_bar_over p {
+  padding: 8px 0 0 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#CNB_1st .cnb_bar_off a {
+  color: #555;
+}
+
+#CNB_1st .cnb_bar_on a,
+#CNB_1st .cnb_bar_over a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 100% paging */
+.section-paging1 {
+  clear: both;
+  float: left;
+  width: 960px;
+  height: 33px;
+  margin-top: -1px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  position: relative;
+}
+
+.section-paging2 {
+  clear: both;
+  float: left;
+  width: 802px;
+  height: 33px;
+  margin-top: -1px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+  position: relative;
+}
+
+.section-paging3 {
+  clear: both;
+  width: 980px;
+  height: 33px;
+  margin-top: -1px;
+  padding-top: 0;
+  border-top: 1px solid #fff;
+  position: relative;
+}
+
+/* Black Paging */
+.paging-page {
+  float: left;
+  width: 100%;
+  *width: auto;
+  height: 33px;
+  text-align: center;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  background-color: #fafafa;
+  font-family: "dotum";
+}
+
+.paging-page a {
+  width: 44px;
+  height: 21px;
+  margin-right: -1px;
+  color: #666;
+  padding: 12px 0 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  border-left: 1px #e5e5e5 solid;
+  border-right: 1px #e5e5e5 solid;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+
+.paging-page a:hover {
+  color: #767676;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ededed;
+}
+
+.paging-page a.selected {
+  position: relative;
+  margin: -1px -1px 0 0;
+  z-index: 3;
+  color: #fff;
+  width: 44px;
+  height: 21px;
+  padding: 12px 0 0 0;
+  border: 1px solid #555;
+  background-color: #555;
+}
+
+.paging-page #arrow {
+  height: 10px;
+  position: relative;
+  top: 12px;
+  border: none;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/common/comm/paging_button.png") no-repeat;
+  cursor: pointer;
+}
+
+.paging-page #arrow:hover {
+  color: #666;
+}
+
+.paging-page #arrow.pprev-on {
+  width: 25px;
+  margin-right: 13px;
+  padding: 0 0 0 13px;
+  background-position: 0 0;
+}
+
+.paging-page #arrow.prev-on {
+  width: 23px;
+  margin-right: 6px;
+  padding: 0 0 0 9px;
+  background-position: 0 -14px;
+}
+
+.paging-page #arrow.next-on {
+  width: 23px;
+  margin-left: 9px;
+  padding: 0 9px 0 0;
+  background-position: 0 -28px;
+}
+
+.paging-page #arrow.nnext-on {
+  width: 23px;
+  margin-left: 9px;
+  padding: 0 9px 0 0;
+  background-position: 0 -42px;
+}
+
+.paging-page .total {
+  position: absolute;
+  right: 9px;
+  top: 11px;
+  color: #999;
+  font-size: 12px;
+}
+
+.paging-page .page-box {
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+.paging-page .page-box .leftButton {
+  position: absolute;
+  left: -89px;
+}
+
+.paging-page .page-box .rightButton {
+  position: absolute;
+  right: -40px;
+}
+
+/* Black Paging */
+.black_paging {
+  float: left;
+  width: 100%;
+  *width: auto;
+  height: 33px;
+  text-align: center;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  background-color: #fafafa;
+  font-family: "dotum";
+}
+
+.black_paging a {
+  width: 44px;
+  height: 21px;
+  margin-right: -1px;
+  color: #666;
+  padding: 12px 0 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  border-left: 1px #e5e5e5 solid;
+  border-right: 1px #e5e5e5 solid;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+
+.black_paging a:hover {
+  color: #767676;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: none;
+}
+
+.black_paging a.selected {
+  position: relative;
+  margin: -1px -1px 0 0;
+  z-index: 3;
+  color: #fff;
+  width: 44px;
+  height: 21px;
+  padding: 12px 0 0 0;
+  border: 1px solid #555;
+  background-color: #555;
+}
+
+.black_paging .btCtrl {
+  height: 10px;
+  position: relative;
+  top: 12px;
+  border: none;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/common/comm/paging_button.png") no-repeat;
+  cursor: pointer;
+}
+
+.black_paging .btCtrl:hover {
+  color: #666;
+}
+
+.black_paging .btCtrl.pprev-on {
+  width: 32px;
+  margin-right: 13px;
+  padding: 0 0 0 9px;
+  background-position: 0 0;
+}
+
+.black_paging .btCtrl.prev-on {
+  width: 29px;
+  margin-right: 13px;
+  padding: 0 0 0 9px;
+  background-position: 0 -14px;
+}
+
+.black_paging .btCtrl.next-on {
+  width: 29px;
+  margin-left: 13px;
+  padding: 0 9px 0 0;
+  background-position: 0 -28px;
+}
+
+.black_paging .btCtrl.nnext-on {
+  width: 32px;
+  margin-left: 13px;
+  padding: 0 9px 0 0;
+  background-position: 0 -42px;
+}
+
+.black_paging .total {
+  position: absolute;
+  right: 9px;
+  top: 11px;
+  color: #999;
+  font-size: 12px;
+}
+
+.black_paging .page-box {
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+.black_paging .page-box .leftButton {
+  position: absolute;
+  left: -89px;
+}
+
+.black_paging .page-box .rightButton {
+  position: absolute;
+  right: -40px;
+}
+
+/* White Paging */
+.white_paging {
+  float: left;
+  width: 100%;
+  *width: auto;
+  height: 33px;
+  text-align: center;
+  border-top: 1px solid #edefee;
+  border-bottom: 1px solid #d1d2d4;
+  position: relative;
+  background-color: #fff;
+  font-family: "dotum";
+}
+
+.white_paging:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.white_paging a {
+  width: 30px;
+  height: 21px;
+  margin-right: -1px;
+  color: #666;
+  padding: 12px 0 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  border-left: 1px #e5e5e5 solid;
+  border-right: 1px #e5e5e5 solid;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+
+.white_paging a:hover {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.white_paging a.selected {
+  position: relative;
+  margin: -1px -1px 0 0;
+  z-index: 3;
+  color: #fe5858;
+  width: 30px;
+  height: 21px;
+  padding: 12px 0 0 0;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.white_paging .btCtrl {
+  height: 10px;
+  position: relative;
+  top: 12px;
+  border: none;
+  background: url("http://bimage.interpark.com/renewPark/reBookpark/common/comm/paging_button.png") no-repeat;
+  cursor: pointer;
+}
+
+.white_paging .btCtrl:hover {
+  color: #666;
+}
+
+.white_paging .btCtrl.pprev-on {
+  width: 32px;
+  margin-left: 13px;
+  padding: 0 0 0 13px;
+  background-position: 0 0;
+}
+
+.white_paging .btCtrl.prev-on {
+  width: 29px;
+  margin-left: 15px;
+  padding: 0 0 0 9px;
+  background-position: 0 -14px;
+}
+
+.white_paging .btCtrl.next-on {
+  width: 29px;
+  margin-left: 15px;
+  padding: 0 9px 0 0;
+  background-position: 0 -28px;
+}
+
+.white_paging .btCtrl.nnext-on {
+  width: 32px;
+  margin-left: 13px;
+  padding: 0 13px 0 0;
+  background-position: 0 -42px;
+}
+
+.white_paging .total {
+  position: absolute;
+  right: 0;
+  top: 11px;
+  color: #999;
+  font-size: 11px;
+  letter-spacing: -1px;
+}
+
+.white_paging .page-box {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+.white_paging .page-box .page-prevBt {
+  position: absolute;
+  left: -123px;
+  top: 0;
+  width: 123px;
+}
+
+.white_paging .page-box .page-prevBt ul {
+  height: 33px;
+}
+
+.white_paging .page-box .page-prevBt ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.white_paging .page-box .page-prevBt ul li {
+  float: right;
+  width: 60px;
+  height: 33px;
+  border-left: 1px solid #ddd;
+  background-color: #fcfcfc;
+}
+
+.white_paging .page-box .page-nextBt {
+  position: absolute;
+  right: -123px;
+  top: 0;
+  width: 123px;
+}
+
+.white_paging .page-box .page-nextBt ul {
+  height: 33px;
+  background-color: #fcfcfc;
+}
+
+.white_paging .page-box .page-nextBt ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.white_paging .page-box .page-nextBt ul li {
+  float: left;
+  width: 60px;
+  height: 33px;
+  border-right: 1px solid #ddd;
+  background-color: #fcfcfc;
+}
+
+.white_paging .page-box .page-nextBt ul li:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.white_paging .page-box.leftButton {
+  position: absolute;
+  left: -89px;
+}
+
+.white_paging .page-box.rightButton {
+  position: absolute;
+  right: -40px;
+}
+
+/* cj 제휴 */
+.top_cjAlliance {
+  background: #7f7f7f;
+}
+
+.top_cjAlliance p {
+  width: 922px;
+  height: 29px;
+  margin: 0 auto;
+  padding: 14px 0 0 38px;
+  color: #fff;
+  background: url("http://bimage.interpark.com/renewPark/cjAlliance/icon_cj.png") no-repeat left 8px;
+  font-size: 11px;
+  letter-spacing: -.3px;
+}
+
+.layerPop_cjAlliance {
+  width: 278px;
+  height: 500px;
+  background: url("http://bimage.interpark.com/renewPark/cjAlliance/bg_layerPop.png") repeat-y left top;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.layerPop_cjAlliance .content {
+  margin: 6px 9px 0 6px;
+  padding-bottom: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+.layerPop_cjAlliance .content span {
+  display: block;
+}
+
+.layerPop_cjAlliance .content .title {
+  padding: 16px 0 20px;
+}
+
+.layerPop_cjAlliance .content .btn_coupon {
+  display: inline-block;
+  margin: 8px 0 10px 24px;
+}
+
+.layerPop_cjAlliance .footWrap {
+  position: relative;
+}
+
+.layerPop_cjAlliance .footWrap .todayCheck {
+  display: inline-block;
+  margin: 7px 0 0 5px;
+  color: #4e4e4e;
+  font-size: 11px;
+}
+
+.layerPop_cjAlliance .footWrap .todayCheck input {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.layerPop_cjAlliance .footWrap .todayCheck label {
+  vertical-align: middle;
+  margin: 1px 3px;
+}
+
+.layerPop_cjAlliance .footWrap .closeBtn {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  background: url("http://bimage.interpark.com/renewPark/cjAlliance/btn_close.png") no-repeat left top;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}

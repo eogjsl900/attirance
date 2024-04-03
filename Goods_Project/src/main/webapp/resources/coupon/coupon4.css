@@ -1,0 +1,440 @@
+@charset "UTF-8";
+@charset "euc-kr";
+/* CSS Document */
+
+/* �고듃 �ㅼ젙 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url(../font/notokr-thin.eot),
+    url(../font/notokr-thin.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-thin.woff) format('woff'),
+    url(../font/notokr-thin.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Noto Sans Regular'), local('NotoSans-regular'),
+    url(../font/notokr-regular.eot),
+    url(../font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-regular.woff) format('woff'),
+    url(../font/notokr-regular.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: /*local('Noto Sans Bold'), local('NotoSans-Bold'),*/ 
+    url(../font/notokr-bold.eot),
+    url(../font/notokr-bold.eot?#iefix) format('embedded-opentype'),
+    url(../font/notokr-bold.woff) format('woff'),
+    url(../font/notokr-bold.ttf) format('opentype');
+}
+
+
+#smart_wrap li{list-style:none}
+#smart_wrap input, textarea, select{letter-spacing:normal}
+#smart_wrap ol, ul, dl{list-style:none}
+#smart_wrap legend{display:hidden;}
+#smart_wrap img{border:0;vertical-align:top}
+#smart_wrap input{vertical-align:middle}
+#smart_wrap table, div, p, span, {font-family:'Noto Sans KR'; color:666; font-size:14px; font-weight:200;}
+#smart_wrap p {padding:0; margin:0; vertical-align: center;}
+#smart_wrap a{text-decoration:none; color:#fff;}
+
+#smart_wrap {width:100%; position:relative; margin:0 auto; }
+
+
+.s_top{ display: none; }
+
+/* �낅젰�� */  
+#baner_wrap {position:relative; width:100%; margin:0 auto;  }   
+.form_title { width:880px; height:68px;}
+.form_title .txt_m {font-family:'Noto Sans KR'; font-size:22px; color:#fff; font-weight:200; line-height:50px; letter-spacing:-1.5px; }
+.form_title .txt_s {font-family:'Noto Sans KR'; font-size:16px; color:#fff; font-weight:200; letter-spacing:-1.5px; margin-top:-12px !important;}
+.form_box {background-color: #fff; /*#ec535f;*/ width:780px; padding:10px 50px 40px 50px;}
+
+
+.sk_color01{ background-color: #fef3e1; background-image: url(./at_top_bg_blue.png); background-size: 100% 703px; background-repeat: repeat-x; padding-bottom: 70px; }
+.sk_color02{ background-color:#1e1360; }
+/*.sk_color02 .txt_m{ height: 68px; line-height: 68px; } 190422 �쒖쨪 */
+.vicurus_color01{ background-color:#d2c3be; }
+.vicurus_color02{ background-color:#008fc9; }
+.ic_color01{ background-color:#e3ecf3; }
+.ic_color02{ background-color:#2d303f; }
+.skb_topimg{ width: 980px; margin: 0 auto; }
+
+
+/* 鍮꾪걧�ъ뒪_�щТ */
+.vicurus02_color01{ background-color: #ede9e6; }
+.vicurus02_color02{ background-color: #ffb400; margin-top: 20px; border: 1px solid #ffb400; width: 980px; }
+.vicurus02_line{ border: 1px solid #ffb400; width: 980px; padding: 10px 0 20px 0; }
+.vicurus02_bncolor{ background-color: #faf8f3; }
+.vicurus02_color02 .txt_m{ color: #000!important; }
+.vicurus02_color02 .txt_s{ color: #000!important; }
+
+#end_wrap02{ width: 980px; text-align: left; }
+#end_wrap02 .end_logo{ padding: 85px 0 50px; }
+#end_wrap02 .end_name{ color: #000; font-size: 36px; font-weight: 200; }
+#end_wrap02 .end_subtext{ color: #333; font-size: 23px; font-weight: 200; padding-bottom: 20px; }
+#end_wrap02 .end_subtext span{ color: #bd3535; font-size: 23px; font-weight: 300; }
+
+.vicu02_btnwrap a{ margin-top: 10px; }
+
+
+/* 鍮꾪걧�ъ뒪_�щТ �쇰뵒�ㅻ쾭�� */
+.q_wrap{ margin-left: 140px; }
+.q_wrap label{ line-height: 20px;}
+.q_wrap .checks.small input[type="radio"] + label {
+  font-size: 16px!important; padding-bottom: 5px; margin-right: 10px; 
+}
+.q_wrap  .checks.small input[type="checkbox"] + label { 
+  font-size: 16px!important; 
+}
+.q_wrap .checks.small.spacing input[type="radio"] + label { 
+  letter-spacing: -1.7px;
+}
+.q_wrap .agree_wrap{ }
+.bt_reds.btn_none{ display: none; }
+
+
+/* end�섏씠吏� */
+#end_wrap {position:relative; width:980px; height:410px; margin:0 auto; background-position:50% 50% ;}      
+
+/* end�섏씠吏� �대�吏� */
+#end_wrap.sk_end{ background:url('../images/sk_end_img.jpg') no-repeat; height: 466px; width: 980px; margin: 0 auto; }
+#end_wrap .sk_name { padding-top:110px; font-family:'Noto Sans KR'; font-size:26px; color:#000; font-weight:200; letter-spacing:-1.5px; margin-left: -30px; }
+#end_wrap.vicurus_end{ background:url('../images/vicurus_end_img.jpg') no-repeat; background-color: #fff; }
+#end_wrap .vicurus_name { margin-left: -660px; padding-top:110px; font-family:'Noto Sans KR'; font-size:42px; color:#000; font-weight:100; letter-spacing:-1.5px; }
+#end_wrap.ic_end{ background:url('../images/ic_end_img.jpg') no-repeat; background-color: #d5dfe8; }
+#end_wrap .ic_name { margin-left: -660px; padding-top:130px; font-family:'Noto Sans KR'; font-size:42px; color:#000; font-weight:100; letter-spacing:-1.5px; }
+
+#end_couponWrap{ width: 980px; height: 96px; margin: 10px auto 40px; }
+#end_couponWrap a{ font-family:'Noto Sans KR'; font-size: 32px; font-weight: 300; line-height: 96px; }
+#end_couponWrap .btn_plus{ display: inline-block; background-color: #e71635; width: 630px; height: 96px; margin-right: 10px; }
+#end_couponWrap .btn_plus:hover{ background-color: #9e0017; }
+#end_couponWrap .btn_plus:active{ background-color: #9e0017; }
+#end_couponWrap .btn_close{ display: inline-block; background-color: #888; width: 330px; height: 96px;  }
+#end_couponWrap .btn_close:hover{ background-color: #555; }
+#end_couponWrap .btn_close:active{ background-color: #555; }
+
+.con_wrap{width:100%; background-color: #fff; margin-top:50px; }
+.ic_con_wrap{ background-color: #e3f3fc!important; }
+.skb_con_wrap{ background-color: #fffaf4!important; }
+.con_wrap2{width:100%; background-color: #fff; margin-top:50px; }
+
+/*�뺣낫,footer�곸뿭*/
+.info_wrap{width:980px; margin:0 auto; margin-top:10px!important; display:inline-block; clear:both; }
+.info_wrap p img{ width:980px; }
+
+
+/* �뚯씠釉� �ㅽ���  */
+table.style1 {border-collapse:collapse; display:inline-block; float:left;}
+table.style1 td {vertical-align: top; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:12px; font-weight:300; color:#555555; letter-spacing:-1.5px; text-align:left; padding:8px 12px;}
+table.style1 td.table_h_tit {text-align:center; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:12px; font-weight:300; color:#555555; letter-spacing:-0.5px; background-color:#f7f7f7; padding:8px;}
+.style1 .table_h_top{font-size:12px !important;}
+
+.info_table {display:inline-block; padding:10px 12px;  border:1px solid #d2d2d2; margin-top:6px; text-align:left; }/*padding:24px 30px;*/
+
+table.style2 {border-collapse:collapse; display:inline-block; width:474px; float:left;}
+table.style2 td {vertical-align: top; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:15px; font-weight:300; color:#555555; letter-spacing:-1.5px; text-align:left; padding:8px 12px;}
+table.style2 td.table_h_tit {text-align:center; border:1px solid #dedede; font-family:'Noto Sans KR'; font-size:15px; font-weight:300; color:#555555; letter-spacing:-0.5px; background-color:#f7f7f7; padding:8px;}
+
+td .center {text-align:center; font-family:'Noto Sans KR'; font-size:15px; font-weight:200; color:#000; letter-spacing:-1.0px; }
+
+/* 媛쒖씤�뺣낫 �곸뿭 �ㅽ���  */
+.info_txt {padding:10px 14px;  border:1px solid #d2d2d2; margin-top:6px; text-align:left; }/*padding:24px 30px;*/
+.info_txt p {font-family:'Noto Sans KR'; color:#555555;  font-size:12px; font-weight:300; letter-spacing:-1.0px; line-height:18px;}
+
+.table_h_top{text-align:left; width:474px; background:#e5e5e5; font-family:'Noto Sans KR'; color:#555555;  font-size:17px !important; font-weight:300 !important; line-height:16px;}
+.txt_r {line-height:20px; font-size:13px; color:#d11b1b; letter-spacing: -1.0px; font-family:'Noto Sans KR'; clear: both; font-weight: 200;}
+
+
+/* �띿뒪�� �ㅽ��� */
+.t_poll {font-family:'Noto Sans KR'; font-weight:300; font-size:16px!important; padding-bottom: 10px!important; letter-spacing: -1px;  margin-top:14px!important; color:#555555;}
+
+.checks.small input[type="radio"] + label {
+  font-size: 16px!important; 
+}
+.checks.small input[type="checkbox"] + label {
+  font-size: 16px!important; 
+}
+.t_checkall {font-family:'Noto Sans KR'; font-size:14px; text-align:left;}
+
+.t_check {font-family:'Noto Sans KR'; clear:both; text-align:left; font-size:14px; color:#555555;}
+.t_check input[type="checkbox"]{width:16px !important; height:16px !important;}
+.t_check label{font-size:14px; color:#555555; font-weight:200 !important;}
+
+.t_form {font-family:'Noto Sans KR'; width:80px; display:inline-block; padding-left:0px; font-size:15px; font-weight:300;}
+.t_box {font-family:'Noto Sans KR'; background-color:#3fa4eb; font-size:15px; font-weight:200; color:#fff; width:56px; padding:2px 7px 2px 7px;}
+.t_boxt {font-family:'Noto Sans KR'; background-color:#f65c52; font-size:15px; font-weight:200; color:#fff; width:56px; padding:2px 7px 2px 7px;}
+.t_box2 {font-family:'Noto Sans KR'; background-color:#ff3d2a; font-size:13px; font-weight:200; color:#fff; width:80px; padding:2px 7px 2px 7px;}
+
+.t_sky {font-family:'Noto Sans KR'; color:#3fa4eb; font-size:15px; font-weight:300;}
+.t_red {font-family:'Noto Sans KR'; color:#ff3d2a; font-size:15px; font-weight:300;}
+.t_blue {font-family:'Noto Sans KR'; color:#007ad0; font-family:'Noto Sans KR'; font-size:14px; font-weight:300; }
+.t_01 {font-family:'Noto Sans KR'; color:#333; font-size:20px; font-weight:300; letter-spacing: -1.5px;}
+.t_02 {font-family:'Noto Sans KR'; color:#e25147; font-size:40px; font-weight:300; margin-bottom:20px;}
+.t_03 {font-family:'Noto Sans KR'; color:#000; font-size:15px; padding:10px 0px 10px 0px; font-weight:200; border-top:1px solid #ddd;}
+.t_04 {font-family:'Noto Sans KR'; color:#e25147; font-size:16px; font-weight:300;}
+.t_05 {font-family:'Noto Sans KR'; font-size:10px; color:#000; font-weight:200;}
+.t_06 {font-family:'Noto Sans KR'; font-size:18px; color:#000; font-weight:200; text-align:center; margin-bottom:15px;}
+.t_07 {font-family:'Noto Sans KR'; font-size:18px; color:#e25147; font-weight:200;}
+.t_08 {font-family:'Noto Sans KR'; font-size:14px; color:#666; font-weight:200; letter-spacing:-1.5px; margin-bottom:20px; }
+.t_09 {font-family:'Noto Sans KR'; font-size:13px; color:#555555; font-weight:300; letter-spacing:-1.2px; margin-bottom:10px; }
+
+.agree_wrap {display:inline-block; width:876px; margin-top:10px; }
+.agree_txt2 { vertical-align: top; margin-top: -5px; padding-left: 5px; }
+.agree_txt2 a{ color: #555!important; }
+
+.bt_black {cursor: pointer; cursor: hand; display:inline-block; text-decoration:none; width:220px; padding:20px 0px; background-color:#3b3b3b; font-family:'Noto Sans KR'; font-size:17px; font-weight:200; color:#fff; letter-spacing:-1px;}
+.bt_black:active {background-color:#000; color:#fff; letter-spacing:-1px; }
+.bt_black:hover {background-color:#000; color:#fff; letter-spacing:-1px; }
+
+.t_check {text-align: left; float:left; margin-top:5px;}
+.t_check label {font-family:'Noto Sans KR'; font-size:12px; letter-spacing:-0.5px; color:#666; font-weight: 200px; margin-right:10px;}
+
+.bt_ss{cursor: pointer; cursor: hand; display:inline-block; text-decoration:none; padding:2px 15px; background-color:#fff; font-family:'Noto Sans KR'; font-size:12px; font-weight:200; color:#666; border:1px solid #ddd;}
+.bt_ss:hover {border:1px solid #000; color:#000;}
+
+
+/* �고듃 */
+.nugu {color:#ec535f; font-size:24px; letter-spacing:-0.5px; font-weight: 300; }
+.text_14 {font-size:14px; letter-spacing:-0.5px;}
+.text_15 {font-size:15px; letter-spacing:-0.5px;}
+.text_16 {font-size:16px; letter-spacing:-0.5px;}
+.text_17 {font-size:17px; letter-spacing:-0.5px;}
+.text_18 {font-size:18px; letter-spacing:-0.5px;}
+
+.t_100 {font-weight:100;}
+.t_200 {font-weight:200;}
+.t_300 {font-weight:300;}
+
+.t_left {text-align:left}
+.t_center {text-align:center}
+.t_right {text-align:right;}
+.t_gray {font-family:'Noto Sans KR'; color:#555555; font-size:13px; font-weight:200; margin-top:15px; padding-bottom:15px; letter-spacing: -1.0px}
+
+.red {color:#e25147;}
+.white {color:#fff;}
+.black {color:#000;}
+.gray {color:#666;}
+
+
+/* 踰꾪듉 �ㅽ���  */
+.bt_reds {display:inline-block; text-decoration:none; padding:15px 50px; margin:20px 0 10px; width:220px; background:url(../images/btn_bg.png) #af5a61 top center no-repeat; border-radius:20px 20px !important; background-size:100% 100%;  font-family:'Noto Sans KR'; font-size:24px; font-weight:300; color:#fff; letter-spacing:-1px; }
+.bt_reds:active {background:url(../images/btn_bg_h.png) #ff3d2a top center no-repeat; width:220px; background-size:100% 100%; color:#fff; }
+.bt_reds:hover {background:url(../images/btn_bg_h.png) #ff3d2a top center no-repeat; width:220px; background-size:100% 100%; color:#fff; }
+.bt_reds .btn_text{ font-family:'Noto Sans KR'; font-size:20px; font-weight:300; color:#fff; letter-spacing:-1px; }
+
+.bt_g {display:inline-block; text-decoration:none; margin-top:10px; padding:10px 20px; background-color:#534d4d; font-family:'Noto Sans KR'; font-size:14px; font-weight:200; color:#fff; letter-spacing:-1px;}
+.bt_g:active {background-color:#7c7c7c; color:#fff; }
+.bt_g:hover {background-color:#7c7c7c; color:#fff; }
+
+.bt_gray {display:inline-block; text-decoration:none; margin-left:8px; padding:2px 4px; background:#555555; font-family:'Noto Sans KR';  font-size:12px; color:#ffffff !important; letter-spacing:-1px;}
+.bt_gray:active {background-color:#333333; }
+.bt_gray:hover {background-color:#333333; }
+
+.bt_r {display:inline-block; text-decoration:none; padding:5px 20px; background-color:#e25147; font-family:'Noto Sans KR'; font-weight: :300; font-size:12px; color:#fff; letter-spacing:-1px;}
+.bt_r:active {background-color:#ff3d2a; color:#fff; }
+.bt_r:hover {background-color:#ff3d2a; color:#fff; }
+
+.btn_search{ display: inline-block; width: 160px; height: 50px; background-color: #0fc2bc; margin-left: 15px; font-size: 24px; font-weight: 300; line-height: 50px; text-align: center; }
+.btn_search:hover{ background-color: #005c59; }
+.btn_search:active{ background-color: #005c59; }
+
+
+/* skb 踰꾪듉 */
+.bt_red2 {display:inline-block; text-decoration:none; padding:20px 50px; margin:10px 0 10px 15px; width:360px; background:url(../images/btn_red.png) #af5a61 top center no-repeat; background-size:100% 100%;  font-family:'Noto Sans KR'; font-size:24px; font-weight:300; color:#fff; letter-spacing:-1px; }
+.bt_red2:active {background:url(../images/btn_red.png) #ff3d2a top center no-repeat; width:360px; background-size:100% 100%; color:#fff; }
+.bt_red2:hover {background:url(../images/btn_red.png) #ff3d2a top center no-repeat; width:360px; background-size:100% 100%; color:#fff; }
+.bt_red2 .btn_text{ font-family:'Noto Sans KR'; font-size:20px; font-weight:300; color:#fff; letter-spacing:-1px; }
+
+
+/* �� �ㅽ��� */
+#sp_form {position: relative; margin-top:10px; margin-bottom:10px; width:610px; }
+#sp_form2 {position: relative;  width:780px; background-color: #fff; padding:0px 20px 0px;}
+
+/* skb�꾩슜 */
+.sp_form_skb {position: relative; margin-top:-10px; width:780px; }
+.input_table_wrap{ width: 500px!important;}
+
+
+.form_sp {font-family:'Noto Sans KR'; font-weight: 200; color:#999; font-size: 24px; letter-spacing:-0.5px;}
+
+input:focus::-webkit-input-placeholder { color: transparent; } 
+input:focus::-moz-placeholder { color: transparent; } 
+input:focus:-ms-input-placeholder { color: transparent; } 
+input:focus::-ms-input-placeholder { color: transparent; }
+
+.form_left {text-align:left; margin-top: 5px; position: relative; }
+.form_left .txt_skt {font-family:'Noto Sans KR'; font-weight: 200; color:#666; font-size: 15px; letter-spacing:-0.5px;}
+.form_left .txt_skt span {color:#e81734;}
+.t_form {font-family:'Noto Sans KR'; color:#414141; width:80px; display:inline-block; padding-left:0px; font-size:15px; font-weight:200;}
+
+.form_left .txt_vicurus {font-family:'Noto Sans KR'; font-weight: 200; color:#666; font-size: 12px; letter-spacing:-0.5px;}
+
+/* 鍮꾪걧�ъ뒪_�щТ �⑥씪吏덈Ц */
+.q_wrap{ text-align: left; width: 780px; padding-top: 10px;  }
+.q_wrap .t_poll{ text-align: left; font-size: 28px; }
+.q_wrap.none{ display: none; }
+
+/* input �ъ씠利�*/
+.input_text1{border-bottom:2px solid #555; border-top:1px solid #fff; border-left:1px solid #fff; border-right:1px solid #fff; width:110px; height:30px; text-indent:2px ; font-weight:200; letter-spacing:-1.5px;
+font-size:24px; font-family:'Noto Sans KR'; height:50px; line-height:30px; color:#999 !important; font-weight:300;}
+.input_text2{ width:30px; text-indent:2px ; font-weight:200; letter-spacing:-1.5px;
+font-size:24px; font-family:'Noto Sans KR'; height:50px; line-height:50px; color:#999 !important; font-weight:300; vertical-align: bottom; margin-left: 10px; }
+.input_text1.w1{width:150px;} /* �대쫫 */
+.input_text1.w2{width:196px;} /*�몃뱶�곕쾲�� */
+.input_text1.w3{width:152px;} /*�대찓�� �� */
+.input_text1.w4{width:190px;} /*�대찓�� �� */
+.input_text1.w5{width:270px;}   /* �앸뀈�붿씪 */
+.input_text1.w6{width:29rem; height:4.0rem; border:0;}
+.input_text1.w7{width:22.4rem;}
+.input_text1.w8{width:420px;}
+.input_text1.w9{width:600px;}
+.input_box_wrap{margin:0.5rem 0 1.6rem 0;}
+.input_box_wrap .text_type9{width:29.0rem;margin:0 auto;padding-top:1.4rem;}
+
+.input_select_wrap{display:inline-block; position:relative; overflow:hidden; vertical-align:middle; background:#fff; border-bottom:2px solid #555;}
+.input_select{height:50px; font-size:24px; text-indent:2px; font-family:'Noto Sans KR'; letter-spacing: -1.5px; font-weight:300; line-height:30px; color:#999; border:none;}
+.input_select.w1{width:154px; } /*�몃뱶��  */
+.input_select.w2{width:197px; } /*�대찓�� */
+.input_select.w3{width:250px;}
+
+
+/* �깅퀎 �쇰뵒�ㅻ쾭�� �붿옄��*/
+.jender_wrap {float:right; margin-right:10px; }
+.jender {float:left; display:block; width:60px; height:50px; }
+/* .jender input{padding:0px 15px; height:50px; position:absolute;z-index:9;}
+.jender label{position:absolute; height:50px; z-index:10; display:block; cursor:pointer; text-align:center; width:60px; padding:0px; border: 1px solid #cecaca; 
+    background-color: #f3f3f3; color:#999; font-size:22px; line-height:50px; font-family:'Noto Sans KR'; font-weight:300;}
+.jender input:checked+label{z-index:100; color:#fff; background-color: #534d4d; border:1px solid #cecaca;}
+.jender label.on{z-index:100; color:#fff; background-color: #534d4d; border:1px solid #cecaca;} */
+
+/* �깅퀎 �쇰뵒�ㅻ쾭�� 蹂�寃� 190418 */
+.jender{ height:40px; margin-top: 10px; }
+.jender input{ width: 26px; height: 26px; margin-top: 1px; }
+.jender label{ font-size: 26px; font-weight: 500; color: #888!important; vertical-align: middle; }
+
+/* �깅퀎 �쇰뵒�ㅻ쾭�� 蹂�寃�2_skb 190422 */
+.sp_form_skb .jender{ width: 50px; height:40px; margin-top: 10px; }
+.sp_form_skb .jender input{ width: 20px; height: 20px; margin-top: 1px; }
+.sp_form_skb .jender label{ font-size: 16px; font-weight: 200; color: #888!important; vertical-align: middle; }
+
+.btn_end {margin-top:150px; margin-left:80px;}
+
+/*footer*/
+.sp_footer {display:block !important; }
+.sp_footer p {color:#333; font-weight:200; font-size:15px; line-height:20px; text-align: center; font-family:'Noto Sans KR';}
+.end_footer{ padding-top: 10px; }
+
+.footer_btn{display:inline-block; width:100%; text-align:center; margin-top:18px;}
+.footer_btn p{display:inline-block; width:100%; margin:0 auto; text-align:center;}
+.footer_btn a {display:inline-block; color:#000000 !important; padding:10px; cursor:pointer; text-decoration:none; font-weight:bold !important; font-size:15px; line-height:20px; text-align: center;}
+.footer_btn a:hover{color:#df2928;}
+.footer_btn span{display:inline-block;  padding:10px 8px; line-height:20px; color:#cccccc; font-size:15px; }
+
+select{-webkit-appearance: menulist!important; }
+
+
+/* 媛쒖씤�뺣낫 �숈쓽 泥댄겕諛뺤뒪 �붿옄��  */
+input[id="cb1"] + label { display: inline-block; width:25px; height:25px;  border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_false.png) #ffffff top center no-repeat; background-size:25px 25px; cursor: pointer;  }
+input[id="cb1"]:checked + label {border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_true.png) #ffffff top center no-repeat; background-size:25px 25px;}
+input[id="cb1"] { display: none;}
+
+input[id="cb2"] + label { display: inline-block; width:20px; height:20px;  border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_false.png) #ffffff top center no-repeat; background-size:20px 20px; cursor: pointer;  }
+input[id="cb2"]:checked + label {border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_true.png) #ffffff top center no-repeat; background-size:20px 20px;}
+input[id="cb2"] { display: none;}
+
+input[id="cb3"] + label { display: inline-block; width:20px; height:20px;  border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_false.png) #ffffff top center no-repeat; background-size:20px 20px; cursor: pointer;  }
+input[id="cb3"]:checked + label {border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_true.png) #ffffff top center no-repeat; background-size:20px 20px;}
+input[id="cb3"] { display: none;}
+
+input[id="cb4"] + label { display: inline-block; width:20px; height:20px;  border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_false.png) #ffffff top center no-repeat; background-size:20px 20px; cursor: pointer;  }
+input[id="cb4"]:checked + label {border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_true.png) #ffffff top center no-repeat; background-size:20px 20px;}
+input[id="cb4"] { display: none;}
+
+input[id="cb5"] + label { display: inline-block; width:20px; height:20px;  border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_false.png) #ffffff top center no-repeat; background-size:20px 20px; cursor: pointer;  }
+input[id="cb5"]:checked + label {border:none; background:url(http://test.memplus.co.kr/mp_design/images/common/chkbox_true.png) #ffffff top center no-repeat; background-size:20px 20px;}
+input[id="cb5"] { display: none;}
+
+
+/* 媛꾪렪�숈쓽 */
+/*�꾩껜�숈쓽 泥댄겕諛뺤뒪*/
+.agree{ margin-top: 20px; }
+.agree2{ width: 630px; margin: 0 auto; margin-left: 30px; }
+.all_check{clear:both !important; width:100%; font-weight:300 !important; font-size:14px !important; color:#555555;}
+.all_check .txt_unline{ color:#dc1919!important; font-size:16px; text-decoration: underline!important; }
+.all_check .txt_unline2{ color:#dc1919!important; font-size:14px; text-decoration: underline!important; }
+
+/* 泥댄겕諛뺤뒪 �ㅽ���*/
+.check-group3 {position:relative;z-index:10; color:#555555;}
+.check-group3 label {display: inline-block; margin-bottom:5px; font-family:'Noto Sans KR'; position: relative; padding:6px 0px 3px 25px; font-weight:200; font-size:14px !important; color:#555555;}
+.check-group3 input[type="checkbox"] {margin-right:10px; margin-left:5px; margin-top:10px; font-family:'Noto Sans KR'; position:absolute; z-index:9; width: 20px; height: 20px; }
+.check-group3 input:checked+label {font-family:'Noto Sans KR'; font-weight: 300}
+
+.check-group2{ display:inline-block; margin-top:10px; color:#555555; text-align:left !important; clear:both;}
+.check-group2 p{text-align:left !important; }
+.check-group2 label {font-family:'Noto Sans KR'; position: relative; padding:0 2px 3px 2px; font-size:14px; color:#555555;}
+.check-group2 input[type="checkbox"] {font-family:'Noto Sans KR'; display: inline-block; width:30px; height:30px; cursor:pointer; background-color:#fff; vertical-align: middle;}
+
+
+/* 媛쒖씤�뺣낫 �꾩껜踰꾪듉 181101 */
+table.style_new {border-collapse:collapse; display:inline-block; text-align:left; margin-top: -5px; }
+.info_title {background-color: #757575; width:467px; line-height: 35px; padding-left:15px;}
+
+
+/* �ㅻЦ �쇰뵒�� */
+#sp_form2 input[type="radio"]{ width: 20px; height: 20px; margin-left: 5px; vertical-align: top; }
+.t_check.all_check input[type="checkbox"]{ width: 20px!important; height: 20px!important; }
+
+
+/* info_coupon */
+.info_coupon_wrap{ width: 980px; margin: 10px auto 10px;  text-align: left; }
+.coupon_title{ width: 948px; border: 1px solid #575757; color: #fff; font-size: 16px; font-weight: bold;  background-color: #757575; padding: 8px 15px; }
+.info_coupon{ width: 948px; border: 1px solid #bfbfbf; padding: 15px; }
+.info_coupon h5{ font-size: 16px; color: #000; letter-spacing: -1px; padding-bottom: 5px; }
+.info_coupon ul{ display: inline-block; width: 440px; vertical-align: top; }
+.info_coupon li{ font-size: 14px; color: #555; font-weight: 200; line-height: 20px; letter-spacing: -0.5px; background-image: url(../images/list_style.png); background-repeat: no-repeat; padding-left: 10px; background-position: 0 5px; }
+.info_coupon .first_child{ border-right: 1px solid #bfbfbf; padding-right: 30px; margin-right: 20px; }
+
+.info_coupon2 li.meritz{ margin-bottom: 10px!important; }
+.info_coupon2{width: 948px; border: 1px solid #bfbfbf; padding: 15px; }
+.info_coupon2 h5{ font-size: 16px; color: #000; letter-spacing: -1px; padding-bottom: 5px; }
+.info_coupon2 ul{ display: inline-block; width: 948px; vertical-align: top; }
+.info_coupon2 li{ font-size: 14px; color: #555; font-weight: 200; line-height: 20px; letter-spacing: -1.0px; background-image: url(../images/list_style.png); background-repeat: no-repeat; padding-left: 10px; background-position: 0 5px; }
+
+
+/* �섎떒 �섏젙 181220 */
+.info_notice {width:948px; border:1px solid #bfbfbf; padding: 14px; }
+.notice_txt {font-size: 14px; letter-spacing:-1.5px!important; vertical-align: top; line-height: 24px;}
+.notice_red {font-size: 14px; color:#c93b3a; letter-spacing: -1.0px; padding-top:5px;}
+.notice_red span {padding-left:13px; font-size: 14px; color:#c93b3a; letter-spacing: -1.0px; padding-top:5px;}
+.info_id {font-size: 14px; color: #555; font-weight: 200; line-height: 20px; letter-spacing: -1.0px; }
+
+
+/*�앹뾽 �섏젙 190124 */
+.popup_input{display: none; position:absolute; left:50%; top:180%; margin-left:-400px; width:774px; background-color:#fff; z-index:10000; border:0; padding: 20px 0; }
+.popup_input2{display: none; position:fixed; left:50%; top:20%; margin-left:-300px; width:600px; overflow: hidden; background-color:#FFF; z-index:10000; border:2px solid #333333; }
+
+
+/* �섎떒 �щ갚 �섏젙 190124 */
+.info_notice, .info_user, .info_coupon_wrap{ margin-top: 0; margin-bottom: 0; margin-bottom: 10px; }
+
+/* 媛쒖씤�뺣낫 �섏젙 190228 */
+.info_user {height:400px;}
+
+
+/* main+sub �⑹튂湲� */
+.info_user_skb{ height: 380px; }
+.survey_form{ margin-top: 10px; }
+.survey_none{ display: none; }
+
+/* �낅젰�� �곕씫泥� - 以묎컙 �뺣젹 */
+.color_m{ text-align: center; }

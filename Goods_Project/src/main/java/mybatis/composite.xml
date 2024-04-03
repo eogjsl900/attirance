@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- mapper화일 sql 문장 작성 -->
+
+<mapper namespace="product.model.Composite">
+	<select id="ShowDetail" resultType="mall.cart.ShoppingInfo">
+		select p.num pnum, p.name pname, od.qty , p.price, p.price * od.qty as amount
+		from ordersdetail od join product p
+		on od.pnum = p.num and od.onum = #{num}
+		order by od.odnum desc
+		
+	</select>
+	
+	<select id="OrderResult" resultType="mall.cart.ShoppingInfo">
+		select p.num pnum, p.name pname, p.image pimage ,p.price / 100 as point ,od.qty , p.price, p.price * od.qty as amount
+		from ordersdetail od join product p
+		on od.pnum = p.num and od.onum = #{maxonum}
+		order by od.odnum desc
+		
+	</select>
+	
+	
+</mapper>
